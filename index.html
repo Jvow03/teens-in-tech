@@ -34,15 +34,13 @@
     }
     .toggle-btn {
       background: none;
-      border: 2px solid white;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 8px;
+      border: none;
+      font-size: 22px;
       cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      color: white;
+      transition: transform 0.3s ease;
     }
     .light .toggle-btn {
-      border-color: #111;
       color: #111;
     }
     .section {
@@ -72,7 +70,7 @@
       <a href="index.html">HOME</a>
       <a href="courses.html">COURSES</a>
     </div>
-    <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+    <button class="toggle-btn" onclick="toggleTheme()" id="themeToggle">🌙</button>
   </nav>
 
   <div class="section">
@@ -107,8 +105,10 @@
     function toggleTheme() {
       const body = document.body;
       const isDark = body.classList.contains('dark');
+      const toggleBtn = document.getElementById('themeToggle');
       body.classList.toggle('dark', !isDark);
       body.classList.toggle('light', isDark);
+      toggleBtn.textContent = isDark ? '🌞' : '🌙';
       localStorage.setItem('theme', isDark ? 'light' : 'dark');
     }
 
@@ -116,6 +116,7 @@
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       document.body.className = savedTheme;
+      document.getElementById('themeToggle').textContent = savedTheme === 'light' ? '🌞' : '🌙';
     }
   </script>
 </body>

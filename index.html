@@ -2,124 +2,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEENS IN TECH</title>
-    <style>
-        body {
-            background: black;
-            color: white;
-            font-family: monospace;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav {
-            background: #111;
-            padding: 10px;
-            border-bottom: 2px solid white;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        .section {
-            padding: 30px 10px;
-        }
-        .box {
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid white;
-            width: 80%;
-            border-radius: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        textarea, input[type="text"] {
-            width: 90%;
-            padding: 10px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        .footer {
-            font-size: 12px;
-            padding: 20px;
-            background: #111;
-        }
-        .footer a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEENS IN TECH</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      transition: background 0.4s, color 0.4s;
+    }
+    body.dark {
+      background: black;
+      color: white;
+    }
+    body.light {
+      background: white;
+      color: #111;
+    }
+    nav {
+      background: #111;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .toggle-btn {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .light .toggle-btn {
+      border-color: #111;
+      color: #111;
+    }
+    .section {
+      padding: 20px;
+      text-align: center;
+    }
+    .box {
+      border: 1px solid;
+      padding: 20px;
+      margin: 15px auto;
+      width: 80%;
+      border-radius: 10px;
+    }
+    .footer {
+      padding: 20px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .footer a {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body>
-    <nav>
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT US</a>
-    </nav>
-
-    <div class="section" id="home">
-        <h1>TEENS IN TECH</h1>
-        <p>Karibu! Hapa tunafundisha Teens maswala mbalimbali kuhusu tech:</p>
-        <ul>
-            <li>Ethical Hacking</li>
-            <li>Programming Languages</li>
-            <li>Web Development</li>
-            <li>Digital Skills kwa Kiswahili</li>
-        </ul>
+<body class="dark">
+  <nav>
+    <div>
+      <a href="index.html">HOME</a>
+      <a href="courses.html">COURSES</a>
     </div>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+  </nav>
 
-    <div class="section" id="resources">
-        <div class="box">
-            <h2>Learning Sections</h2>
-            <button>Programming Basics</button>
-            <button>Ethical Hacking 101</button>
-            <button>HTML & CSS Crash Course</button>
-            <button>Cybersecurity Tips</button>
-        </div>
-    </div>
+  <div class="section">
+    <h1>TEENS IN TECH</h1>
+    <p>Karibu! Hapa tunafundisha Teens maswala mbalimbali kuhusu tech:</p>
+    <ul>
+      <li>Ethical Hacking</li>
+      <li>Programming Languages</li>
+      <li>Web Development</li>
+      <li>Digital Skills kwa Kiswahili</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <div class="box">
-            <h2>Teens in Tech</h2>
-            <p>Je, unataka kujifunza Programming kwa Kiswahili?</p>
-            <p>Jiunge na Teens in Tech kupitia Telegram!</p>
-            <p>Contact us: +255 744 664 206</p>
-        </div>
+  <div class="section">
+    <div class="box">
+      <h2>Join Our WhatsApp Group</h2>
+      <p>Connect with other tech-savvy teens and grow together!</p>
+      <a href="https://chat.whatsapp.com/EBukCywNTEP8JCCWPGi3zx" target="_blank" style="background:#25D366; color:white; padding:12px 25px; border-radius:10px; text-decoration:none; font-weight:bold;">
+          Join WhatsApp Group
+      </a>
     </div>
+  </div>
 
-    <div class="section">
-        <div class="box">
-            <h2>Join Our WhatsApp Group</h2>
-            <p>Connect with other tech-savvy teens and grow together!</p>
-            <a href="https://chat.whatsapp.com/EBukCywNTEP8JCCWPGi3zx" target="_blank" style="background:#25D366; color:white; padding:12px 25px; border-radius:10px; text-decoration:none; font-weight:bold;">
-                Join WhatsApp Group
-            </a>
-        </div>
-    </div>
+  <div class="footer">
+    &copy; 2025 Teens in Tech<br>
+    <a href="https://youtube.com/@teensintech" target="_blank">YouTube</a> |
+    <a href="https://instagram.com/teens_in_tech__" target="_blank">Instagram</a> |
+    <a href="admin.html">Admin Login</a>
+  </div>
 
-    <div class="section">
-        <div class="box">
-            <h2>Leave Your Comment</h2>
-            <textarea rows="4" placeholder="Write your comment here..."></textarea><br>
-            <button>Submit Comment</button>
-        </div>
-    </div>
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains('dark');
+      body.classList.toggle('dark', !isDark);
+      body.classList.toggle('light', isDark);
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    }
 
-    <div class="footer">
-        &copy; 2025 Teens in Tech | Designed for educational purposes only.<br>
-        Follow our <a href="https://youtube.com/@teensintech" target="_blank">YouTube channel</a> for more tech updates.<br>
-        <a href="admin.html" style="color: white; font-size: 12px;">Admin Login</a>
-    </div>
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.body.className = savedTheme;
+    }
+  </script>
 </body>
 </html>

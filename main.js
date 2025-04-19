@@ -1,1 +1,1 @@
-console.log('Welcome to Teens in Tech');
+console.log('Teens in Tech is up and running!');

@@ -1,2 +1,2 @@
 # Teens in Tech
-This is the official site bundle.
+Rebuilt for correct GitHub Pages display.

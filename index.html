@@ -1,122 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEENS IN TECH</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: monospace;
-      transition: background 0.4s, color 0.4s;
-    }
-    body.dark {
-      background: black;
-      color: white;
-    }
-    body.light {
-      background: white;
-      color: #111;
-    }
-    nav {
-      background: #111;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-    .toggle-btn {
-      background: none;
-      border: 2px solid white;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-    }
-    .light .toggle-btn {
-      border-color: #111;
-      color: #111;
-    }
-    .section {
-      padding: 20px;
-      text-align: center;
-    }
-    .box {
-      border: 1px solid;
-      padding: 20px;
-      margin: 15px auto;
-      width: 80%;
-      border-radius: 10px;
-    }
-    .footer {
-      padding: 20px;
-      font-size: 12px;
-      text-align: center;
-    }
-    .footer a {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teens in Tech</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
 </head>
-<body class="dark">
-  <nav>
-    <div>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">TEENS IN TECH</a>
+    </div>
+    <div class="nav-right">
       <a href="index.html">HOME</a>
       <a href="courses.html">COURSES</a>
+      <button id="mode-toggle" class="mode-toggle">☀</button>
     </div>
-    <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
   </nav>
 
-  <div class="section">
-    <h1>TEENS IN TECH</h1>
-    <p>Karibu! Hapa tunafundisha Teens maswala mbalimbali kuhusu tech:</p>
-    <ul>
-      <li>Ethical Hacking</li>
-      <li>Programming Languages</li>
-      <li>Web Development</li>
-      <li>Digital Skills kwa Kiswahili</li>
-    </ul>
-  </div>
+  <main>
+    <section class="intro">
+      <h1>TEENS IN TECH</h1>
+      <p>Karibu! Hapa tunafundisha Teens maswala mbalimbali kuhusu tech:</p>
+      <ul>
+        <li>Ethical Hacking</li>
+        <li>Programming Languages</li>
+        <li>Web Development</li>
+        <li>Digital Skills kwa Kiswahili</li>
+      </ul>
+    </section>
 
-  <div class="section">
-    <div class="box">
+    <section class="whatsapp-section">
       <h2>Join Our WhatsApp Group</h2>
       <p>Connect with other tech-savvy teens and grow together!</p>
-      <a href="https://chat.whatsapp.com/EBukCywNTEP8JCCWPGi3zx" target="_blank" style="background:#25D366; color:white; padding:12px 25px; border-radius:10px; text-decoration:none; font-weight:bold;">
-          Join WhatsApp Group
-      </a>
-    </div>
-  </div>
+      <a href="https://chat.whatsapp.com/EBukCywNTEP8JCCWPGi3zx" class="whatsapp-button" target="_blank">Join WhatsApp Group</a>
+    </section>
+  </main>
 
-  <div class="footer">
-    &copy; 2025 Teens in Tech<br>
-    <a href="https://youtube.com/@teensintech" target="_blank">YouTube</a> |
-    <a href="https://instagram.com/teens_in_tech__" target="_blank">Instagram</a> |
-    <a href="admin.html">Admin Login</a>
-  </div>
-
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const isDark = body.classList.contains('dark');
-      body.classList.toggle('dark', !isDark);
-      body.classList.toggle('light', isDark);
-      localStorage.setItem('theme', isDark ? 'light' : 'dark');
-    }
-
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.body.className = savedTheme;
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025 Teens in Tech</p>
+    <p>
+      <a href="#">YouTube</a> |
+      <a href="https://instagram.com/teens_in_tech__" target="_blank">Instagram</a> |
+      <a href="admin.html">Admin Login</a>
+    </p>
+  </footer>
 </body>
 </html>

@@ -1,1 +1,0 @@
-console.log('Teens in Tech is up and running!');

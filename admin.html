@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Login - Teens in Tech</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .admin-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .admin-btn {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .admin-btn:hover {
+      opacity: 0.9;
+    }
+    #message {
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #e53935;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <h2>Admin Login</h2>
+    <form onsubmit="checkPassword(event)">
+      <input type="text" id="admin-username" placeholder="Admin Username" required>
+      <input type="password" id="admin-password" placeholder="Password" required>
+      <button type="submit" class="admin-btn">Login</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function checkPassword(event) {
+      event.preventDefault();
+      const username = document.getElementById('admin-username').value;
+      const password = document.getElementById('admin-password').value;
+      const message = document.getElementById('message');
+
+      if (username === "admin" && password === "1000000$@#") {
+        message.style.color = "green";
+        message.textContent = "Welcome, Admin!";
+      } else {
+        message.style.color = "#e53935";
+        message.textContent = "Access Denied: Incorrect credentials.";
+      }
+    }
+  </script>
+</body>
+</html>
